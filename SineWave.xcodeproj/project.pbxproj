@@ -21,6 +21,9 @@
 		DC161E811895BDEC00B888B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC161E631895BDEC00B888B2 /* UIKit.framework */; };
 		DC161E891895BDEC00B888B2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DC161E871895BDEC00B888B2 /* InfoPlist.strings */; };
 		DC161E8B1895BDEC00B888B2 /* SineWaveTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DC161E8A1895BDEC00B888B2 /* SineWaveTests.m */; };
+		DC161E971895BEA000B888B2 /* libTheAmazingAudioEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DC161E941895BEA000B888B2 /* libTheAmazingAudioEngine.a */; };
+		DC161E981895BEA000B888B2 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC161E951895BEA000B888B2 /* Accelerate.framework */; };
+		DC161E991895BEA000B888B2 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC161E961895BEA000B888B2 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		DC161E861895BDEC00B888B2 /* SineWaveTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SineWaveTests-Info.plist"; sourceTree = "<group>"; };
 		DC161E881895BDEC00B888B2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DC161E8A1895BDEC00B888B2 /* SineWaveTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SineWaveTests.m; sourceTree = "<group>"; };
+		DC161E941895BEA000B888B2 /* libTheAmazingAudioEngine.a */ = {isa = PBXFileReference; lastKnownFileType = file; name = libTheAmazingAudioEngine.a; path = "TheAmazingAudioEngine/build/Debug-iphoneos/libTheAmazingAudioEngine.a"; sourceTree = "<group>"; };
+		DC161E951895BEA000B888B2 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		DC161E961895BEA000B888B2 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC161E971895BEA000B888B2 /* libTheAmazingAudioEngine.a in Frameworks */,
+				DC161E981895BEA000B888B2 /* Accelerate.framework in Frameworks */,
+				DC161E991895BEA000B888B2 /* AudioToolbox.framework in Frameworks */,
 				DC161E621895BDEC00B888B2 /* CoreGraphics.framework in Frameworks */,
 				DC161E641895BDEC00B888B2 /* UIKit.framework in Frameworks */,
 				DC161E601895BDEC00B888B2 /* Foundation.framework in Frameworks */,
@@ -101,6 +110,9 @@
 		DC161E5E1895BDEC00B888B2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC161E941895BEA000B888B2 /* libTheAmazingAudioEngine.a */,
+				DC161E951895BEA000B888B2 /* Accelerate.framework */,
+				DC161E961895BEA000B888B2 /* AudioToolbox.framework */,
 				DC161E5F1895BDEC00B888B2 /* Foundation.framework */,
 				DC161E611895BDEC00B888B2 /* CoreGraphics.framework */,
 				DC161E631895BDEC00B888B2 /* UIKit.framework */,
@@ -380,7 +392,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SineWave/SineWave-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/TheAmazingAudioEngine/TheAmazingAudioEngine",
+				);
 				INFOPLIST_FILE = "SineWave/SineWave-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/TheAmazingAudioEngine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -393,7 +411,13 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SineWave/SineWave-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"$(SRCROOT)/TheAmazingAudioEngine/TheAmazingAudioEngine",
+				);
 				INFOPLIST_FILE = "SineWave/SineWave-Info.plist";
+				LIBRARY_SEARCH_PATHS = "$(SRCROOT)/TheAmazingAudioEngine";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -460,6 +484,7 @@
 				DC161E901895BDEC00B888B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DC161E911895BDEC00B888B2 /* Build configuration list for PBXNativeTarget "SineWaveTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +493,7 @@
 				DC161E931895BDEC00B888B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
